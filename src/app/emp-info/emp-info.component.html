@@ -18,9 +18,9 @@
                 <td>{{ employee.id }}</td>
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.age }}</td>
-                <td class="w-40">
+                <td>
                     <button class="btn btn-primary btn-sm me-2" (click)="editEmployee(employee)">Edit</button>
-                    <button class="btn btn-danger btn-sm" (click)="deleteEmployee(employee?.id)">Delete</button>
+                     <!-- <button class="btn btn-danger btn-sm" (click)="deleteEmployee(employee?.id)">Delete</button> -->
                 </td>
             </tr>
             <tr *ngIf="employees.length === 0">
