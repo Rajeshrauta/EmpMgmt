@@ -4,6 +4,7 @@ import { EmpInfoComponent } from './emp-info/emp-info.component';
 
 const routes: Routes = [
     { path: '', component: EmpInfoComponent },
+    { path: '**', component: EmpInfoComponent },
 ];
 
 @NgModule({
