@@ -1,0 +1,36 @@
+<!-- employee-list.component.html -->
+<div class="container mt-4">
+    <h2>Employee List</h2>
+    <div class="mb-3 text-end">
+        <button class="btn btn-success" (click)="openAddEmployeeModal()">Add Employee</button>
+    </div>
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.age }}</td>
+                <td class="w-40">
+                    <button class="btn btn-primary btn-sm me-2" (click)="editEmployee(employee)">Edit</button>
+                    <button class="btn btn-danger btn-sm" (click)="deleteEmployee(employee?.id)">Delete</button>
+                </td>
+            </tr>
+            <tr *ngIf="employees.length === 0">
+                <td colspan="4">No employees found</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<app-add-emp></app-add-emp>
+<app-edit-emp></app-edit-emp>
