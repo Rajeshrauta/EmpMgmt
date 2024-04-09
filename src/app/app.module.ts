@@ -23,10 +23,7 @@ import { EditEmpComponent } from './edit-emp/edit-emp.component';
         CommonModule,
         BrowserModule,
         ReactiveFormsModule,
-        RouterModule.forRoot([
-            { path: '', component: EmpInfoComponent },
-            { path: 'add', component: AddEmpComponent },
-        ]),
+        AppRoutingModule,
         HttpClientModule,
         ModalModule.forRoot(),
         FormsModule
